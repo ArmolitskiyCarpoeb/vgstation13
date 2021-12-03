@@ -19,7 +19,7 @@ var/list/adminhelp_ignored_words = list("unknown","the","a","an","of","monkey","
 	//clean the input msg
 	if(!msg)
 		return
-	msg = trim_left(trim_right(sanitize(copytext(msg,1,MAX_MESSAGE_LEN))))
+	msg = trim_left(trim_right(sanitize(copytext_char(msg,1,MAX_MESSAGE_LEN))))
 	if(!msg)
 		return
 	//sanity check, do it twice
@@ -80,7 +80,7 @@ var/list/adminhelp_ignored_words = list("unknown","the","a","an","of","monkey","
 							mobs_found += found
 							if(!ai_found && isAI(found))
 								ai_found = 1
-							msg += "<b><font color='red'>[original_word] (<A HREF='?_src_=holder;adminmoreinfo=\ref[found]'>?</A>)</font></b> "
+							msg += "<b><font color='black'>[original_word] (<A HREF='?_src_=holder;adminmoreinfo=\ref[found]'>?</A>)</font></b> "
 							continue
 			msg += "[original_word] "
 
