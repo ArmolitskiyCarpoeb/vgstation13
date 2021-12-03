@@ -326,8 +326,8 @@ var/auxtools_path
 
 	s += {"<b>[station_name()]</b>"
 		(
-		<a href=\"http://\">" //Change this to wherever you want the hub to link to
-		Default"  //Replace this with something else. Or ever better, delete it and uncomment the game version
+		<a href=\"http://discord.gg/vXj9E6sqZS\">" //Change this to wherever you want the hub to link to
+		Codebase: /vg/station. The main rule: DON'T BE AN ASSHOLE."  //Replace this with something else. Or ever better, delete it and uncomment the game version
 		</a>
 		)"}
 	var/list/features = list()
