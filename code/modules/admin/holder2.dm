@@ -36,7 +36,7 @@ var/list/admin_datums = list()
 		owner.holder = src
 		owner.add_admin_verbs()	//TODO
 		admins |= C
-		owner.verbs -= /client/proc/readmin
+		//owner.verbs -= /client/proc/readmin
 
 		add_menu_items()
 
