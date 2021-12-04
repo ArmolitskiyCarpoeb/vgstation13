@@ -176,7 +176,7 @@ var/list/admin_ranks = list()								//list of all ranks with associated rights
 		if(D)
 			rank = D.rank
 		msg += "\t[ckey] - [rank]\n"
-	//testing(msg)
+	testing(msg)
 	#endif
 
 #ifdef TESTING
