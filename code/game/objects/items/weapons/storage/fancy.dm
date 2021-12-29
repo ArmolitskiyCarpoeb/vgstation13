@@ -63,7 +63,8 @@
 	storage_slots = 6
 	can_only_hold = list("/obj/item/weapon/reagent_containers/food/snacks/donut", \
 					"/obj/item/weapon/reagent_containers/food/snacks/customizable/candy/donut", \
-					"/obj/item/weapon/reagent_containers/food/snacks/donutiron")
+					"/obj/item/weapon/reagent_containers/food/snacks/donutiron", \
+					"/obj/item/weapon/reagent_containers/food/snacks/riceball")
 
 	foldable = /obj/item/stack/sheet/cardboard
 	starting_materials = list(MAT_CARDBOARD = 3750)
@@ -771,6 +772,9 @@
 	box_type = "plate"
 	storage_slots = 10
 	can_only_hold = list("/obj/item/weapon/spacecash", "/obj/item/weapon/coin")
+
+	starting_materials = list(MAT_GOLD = 2*CC_PER_SHEET_GOLD) // Recipe requires 2 sheets
+	w_type = RECYK_METAL
 
 /*
  * Beer Box

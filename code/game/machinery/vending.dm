@@ -2027,6 +2027,7 @@ var/global/num_vending_terminals = 1
 	products = list(
 		/obj/item/weapon/handcuffs = 8,
 		/obj/item/weapon/grenade/flashbang = 4,
+		/obj/item/weapon/grenade/chem_grenade/teargas = 4,
 		/obj/item/device/flash = 5,
 		/obj/item/weapon/reagent_containers/food/snacks/donut/normal = 12,
 		/obj/item/weapon/storage/box/evidence = 6,
@@ -3177,6 +3178,7 @@ var/global/num_vending_terminals = 1
 		/obj/item/weapon/card/id/vox/extra = 3,
 		/obj/item/weapon/stamp/trader = 3,
 		/obj/item/crackerbox = 1,
+		/obj/item/device/dses = 1,
 		/obj/item/weapon/storage/box/biscuit = 2,
 		/obj/item/talonprosthetic = 3,
 		/obj/machinery/vending/sale/trader = 1,
@@ -3188,20 +3190,20 @@ var/global/num_vending_terminals = 1
 		/obj/item/weapon/card/id/vox/extra = 100,
 		/obj/item/weapon/stamp/trader = 20,
 		/obj/item/crackerbox = 200,
+		/obj/item/device/dses = 200,
 		/obj/item/talonprosthetic = 80,
 		/obj/machinery/vending/sale/trader = 80,
 		)
 	slogan_languages = list(LANGUAGE_VOX)
 
-//trade vendor used to be here, now see trade_datums.dm
-
-/obj/machinery/vending/trader/New()
-	load_dungeon(/datum/map_element/dungeon/mecha_graveyard)
-	var/list/upgrades = existing_typesof(/obj/item/borg/upgrade) - /obj/item/borg/upgrade/magnetic_gripper
+/obj/machinery/vending/tradeoutfitter/New()
+	var/list/dses_upgrades = existing_typesof(/obj/item/dses_module)
 	for(var/i = 1 to 3)
-		premium.Add(pick_n_take(upgrades))
+		premium.Add(pick_n_take(dses_upgrades))
 
 	..()
+
+//trade vendor used to be here, now see trade_datums.dm
 
 /obj/machinery/vending/barber
 	name = "\improper BarberVend"
